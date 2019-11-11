@@ -17,6 +17,7 @@
 \usepackage{color}
 \usepackage{ifthen}
 \usepackage[rightcaption]{sidecap}
+\usepackage[font=scriptsize,labelfont=bf]{caption}
 %usepackage{ragged2e}
 
 \usepackage[T1]{fontenc}
@@ -74,7 +75,6 @@
   \vspace{0.1cm}
   \begin{columns}[t, totalwidth=\textwidth]
   \begin{column}[c]{1.05cm}
-     \includegraphics[width=1cm]{figure/logo1.png}
   \end{column}
   % TITLE
    \begin{column}[c]{10.6cm}
@@ -86,7 +86,6 @@
   % PICTURE
   \begin{column}[c]{1.15cm}
     \hspace{0.005cm}
-    \includegraphics[width=1cm]{figure/figure1.png}
   \end{column}
   \end{columns}
   {\color{slfcolor}\hrule height 1pt\vspace{0.1cm}}
@@ -123,20 +122,20 @@
     \hyperlink{abstract}{\beamerbutton{2 Minute Madness}}
     \tocbuttoncolor{radar}
     \hspace{\buttonspacingfootline}
-      \hyperlink{radar}{\beamerbutton{Section 1}}
-
+      \hyperlink{radar}{\beamerbutton{Workflow}}
+     \tocbuttoncolor{slab}
+    \hspace{\buttonspacingfootline}
+      \hyperlink{slab}{\beamerbutton{Article to Text}}
     \tocbuttoncolor{line}
     \hspace{\buttonspacingfootline}
-      \hyperlink{line}{\beamerbutton{Section 2}}
+      \hyperlink{line}{\beamerbutton{Bash}}
     \tocbuttoncolor{major}
     \hspace{\buttonspacingfootline}
-      \hyperlink{major}{\beamerbutton{Section 3}}
-    \tocbuttoncolor{slab}
-    \hspace{\buttonspacingfootline}
-      \hyperlink{slab}{\beamerbutton{Section 4}}
+      \hyperlink{major}{\beamerbutton{R}}
+   
     \tocbuttoncolor{minor}
     \hspace{\buttonspacingfootline}
-      \hyperlink{minor}{\beamerbutton{Section 5}}
+      \hyperlink{minor}{\beamerbutton{Results}}
     \tocbuttoncolor{conclusion}
     \hspace{\buttonspacingfootline}
       \hyperlink{conclusion}{\beamerbutton{Conclusion}}
@@ -178,23 +177,19 @@
   \begin{columns}[t]
   %https://tex.stackexchange.com/a/7452/5483
   \begin{column}[c]{0.45\textwidth}
-%http://lorempixel.com/1200/800/cats/Figure2/     
-%http://lorempixel.com/1200/800/cats/Figure3/
-\includegraphics[width=1\textwidth,height=0.5\textheight,keepaspectratio]{%
-figure/logo1.png}\\
-\vspace{12pt}
-\includegraphics[width=1\textwidth,height=0.5\textheight,keepaspectratio]{%
-figure/figure1.png}
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\textwidth,height=1\textheight,keepaspectratio]{figure/corpus.png}
+\caption{A corpus of \textit{Neues Deutschland} articles in .txt format. Adapted from Neues Deutschland, by Jan Jugueta, 2019, retrieved from http://nd-archiv.de/. Copyright 1974 by Neues Deutschland.}
+\end{figure}
     \end{column}
     \begin{column}[c]{0.45\textwidth}
-    \parbox{\linewidth}{
-
-      Integer dictum condimentum elit ac placerat. Duis vitae ex nec mauris iaculis maximus. Aliquam est velit, imperdiet placerat velit elementum, fringilla fringilla tortor. Nunc tempus vulputate leo, ac commodo dolor mattis ullamcorper. Donec elementum dapibus justo ut vestibulum. 
-      
-      \vspace{12pt}
-      
-      Phasellus aliquam porta justo, et accumsan libero tristique quis. Aenean vel risus accumsan, feugiat lorem vel, placerat.
-      }
+    \begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{figure/results.png}
+\caption{Results from Body, Title and Title + Subtitle word frequency analysis. 
+Screenshot by Jan Jugueta.}
+\end{figure}
     \end{column}
     
   \end{columns}
@@ -205,28 +200,39 @@ figure/figure1.png}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \mysection{radar}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}\label{\secvariable} %%Eine Folie
+\begin{center}
+\includegraphics[width=1\textwidth,height=0.7\textheight,keepaspectratio]{%
+figure/workflow.png}
+\end{center}
+\vspace{-0.2cm}
+
+Corpus Word Frequency Analysis automates the process from extracting the correct data from the .txt files to creating the .csv files. The user will still need to save their corpus in a .txt file format to be compatible with the software. 
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mysection{slab}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}\label{\secvariable}
   \begin{columns}[t]
   %https://tex.stackexchange.com/a/7452/5483
-    \begin{column}[c]{0.45\textwidth}
-    \parbox{\linewidth}{
-
-      Donec dignissim vel ligula a sollicitudin. Donec rutrum faucibus dictum. Quisque in pellentesque massa. Aliquam mi lectus, facilisis sit amet dignissim vitae, porta vitae elit. Nulla nulla nunc, consectetur a blandit nec, aliquam ultrices dolor. Duis pellentesque urna ut sem lobortis maximus.
-      
-      \vspace{12pt}
-      
-	  Some extra words demonstrating a paragraph. The quick brown fox jumps over the lazy dog.
-      }
+  \begin{column}[c]{0.45\textwidth}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\textwidth,height=0.7\textheight,keepaspectratio]{figure/nun.png}
+\caption{Article 'Nun im Nepstadion Sieg für Nationalelf 1:0' from \textit{Neues Deutschland} 22/11/1973, retrieved from http://nd-archiv.de/. Copyright 1973 by Neues Deutschland.}
+\end{figure}
     \end{column}
     \begin{column}[c]{0.45\textwidth}
-%http://lorempixel.com/1200/800/cats/Figure2/     
-%http://lorempixel.com/1200/800/cats/Figure3/
-\includegraphics[width=1\textwidth,height=0.5\textheight,keepaspectratio]{%
-figure/figure2.png}\\
-\vspace{12pt}
-\includegraphics[width=1\textwidth,height=0.5\textheight,keepaspectratio]{%
-figure/figure3.png}
+    \begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{figure/nuntxt.png}
+\caption{Article converted to .txt format. Date, title, author and body text saved on specific lines. 
+Screenshot by Jan Jugueta.}
+\end{figure}
     \end{column}
+    
   \end{columns}
 
   
@@ -236,97 +242,71 @@ figure/figure3.png}
 \mysection{line}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}\label{\secvariable}
-\begin{center}
-  \vspace{-0.5cm}
-  %http://lorempixel.com/1200/800/cats/Figure4/
- \includegraphics[width=1\textwidth,height=0.75\textheight,keepaspectratio]{%
-  figure/figure4.png}
-\end{center}
-  \vspace{-0.5cm}
-  \begin{enumerate}[(a)]
-  
-  
-  \item Morbi vehicula ornare augue vitae porttitor.
-  \item Donec porttitor, nibh id pretium euismod,
-  \end{enumerate}
+  \begin{columns}[t]
+  %https://tex.stackexchange.com/a/7452/5483
+    \begin{column}[c]{0.45\textwidth}
+    \parbox{\linewidth}{
 
-  $\quad \Rightarrow$ Aliquam et turpis eget lacus finibus congue.
-  
+      \begingroup
+      \fontsize{10pt}
+      \textbf{Bash Unix Shell Script}
+      
+      \vspace{12pt}
+      
+	  Bash Unix Shell scripts have been written to extract \textit{specific} information from the corpus. This allows for the textual analysis not to be skewed by irrelevant data. It also keeps the original .txt file unaltered. The Bash scripts: \begin{itemize}
+	      \item Extract body text only
+	      \item Extract title text only
+	      \item Extract title and subtitle text only
+	  \end{itemize}\endgroup
+      }
+    \end{column}
+    \begin{column}[c]{0.45\textwidth}
+    \begin{figure}[h]
+\centering
+\includegraphics[width=1.1\textwidth,height=1.1\textheight,keepaspectratio]{figure/bashscript.png}
+\caption{Screenshot of Bash Unix Shell script in .txt file format. Screenshot by Jan Jugueta.}
+\end{figure}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \mysection{major}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}\label{\secvariable} %%Eine Folie
-\begin{center}
-%http://lorempixel.com/1200/800/cats/Figure5/
-\includegraphics[width=1\textwidth,height=0.8\textheight,keepaspectratio]{%
-figure/figure5.png}
-\end{center}
-
-    \parbox{\linewidth}{
-
-Vivamus efficitur ac odio ac scelerisque. Sed tristique vel sapien euismod elementum. Donec eu mollis mi, et auctor est.
-}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\mysection{slab}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}\label{\secvariable}
-%http://lorempixel.com/1200/800/cats/Figure6/
-\begin{center}
-\includegraphics[width=1\textwidth,height=0.75\textheight,keepaspectratio]{%
-figure/figure6.png}
-\end{center}
+  \begin{columns}[t]
+  %https://tex.stackexchange.com/a/7452/5483
+    \begin{column}[c]{0.45\textwidth}
     \parbox{\linewidth}{
 
-Etiam cursus nibh nec ex tincidunt pharetra quis vel nibh. Sed condimentum lobortis mollis. Donec vitae odio nec lacus iaculis condimentum. Proin dictum consequat quam nec. \hyperlink{slabtable}{\beamerbutton{more \dots}}
-}
-
+      \begingroup
+      \fontsize{10pt}
+      \textbf{R for Textual Analysis}
+      
+      \vspace{12pt}
+      
+	  The word frequency textual analysis is powered by R: a programming language used by researchers to interpret and manipulate data sets. The RScript was coded to: \begin{itemize}
+	      \item Remove stop words
+	      \item Remove punctuation
+	      \item Remove numbers
+	      \item Convert all words to lower case
+	      \item Count the frequency of words
+	      \item Order them from most frequent to least frequent
+	      \item Create a .csv file with the results
+	  \end{itemize}\endgroup
+      }
+    \end{column}
+    \begin{column}[c]{0.45\textwidth}
+    \begin{figure}[h]
+\centering
+\includegraphics[width=1.1\textwidth,height=1.1\textheight,keepaspectratio]{figure/rscript.png}
+\caption{Screenshot of R script used in the RStudio environment. Screenshot by Jan Jugueta.}
+\end{figure}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 
-
-\begin{frame}\label{slabtable}
-\begin{columns}
-\begin{column}[t]{1.1\textwidth}
-\hyperlink{slab}{\beamerbutton{\dots back to figure}}\\
-Morbi mauris turpis, ornare eu elit quis, pulvinar bibendum sapien. Nulla vel justo id dui aliquam blandit. Etiam pellentesque ac nisl ut suscipit. 
-
-
-%Table from original template.
-
-\vspace{0.3cm}
-\end{column}
-\end{columns}
-\usebeamerfont{bodytext}
- \begin{tabular}{c|rr@{}c@{}rrrrr}
- \setlength{\tabcolsep}{6mm}
-   & Time & \multicolumn{3}{r}{Volume} & Range & Length & Area & Depth \\
-   & [\si{\second}] & \multicolumn{3}{r}{[\si{\cubic\metre}]} & [\si{\metre}] &
-[\si{\metre}] & [\si{\square\metre}] & [\si{\metre}]\\\hline
-
-   \textbf{Avalanche~\#0019} & & $V_t$ &=& 29500 & & & 40411 & 0.73 \\
-   initial release &3.4& $V_0$ &=& 2188 & 2506 &  62 &  1400 & 1.56 \\
-   slab \#1 & 17.2    &  $V_1$ &=&  521 & 2356 &  39 &   701 & 0.74 \\
-   slab \#2 & 23.4    &  $V_2$ &=& 3503 & 2284 &  83 &  2753 & 1.28 \\
-   slab \#3 & 20--25$^*$ &  $V_3$ &=& 3345 & 2150 &  99 &  1880 & 1.78 \\
-   slab \#4 & 38.7    &  $V_4$ &=& 4276 & 1945 & 153 &  3657 & 1.17 \\
-   \\
-   \textbf{Avalanche~\#0017} & &  $V_t$ &=& 78500 & & & 82632 & 0.95\\
-   initial release&5.2&  $V_0$ &=& 15233 & 2402 & 191 & 12974 & 1.17\\
-   slab \#5 & 12.2    &  $V_5$ &=&  7620 & 2219 & 202 &  6043 & 1.26 \\
-   slab \#6 & 14.1    &  $V_6$ &=&  5868 & 2215 & 166 &  5851 & 1.01 \\
-   slab \#7 & 25.6    &  $V_7$ &=&  6307 & 1982 &  95 &  3320 & 1.90 \\
-   slab \#8 & 15--25$^*$ &  $V_8$ &=& 10663 & 1947 & 253 &  5037 & 2.12
- \end{tabular}
- 
-\vspace{0.2cm}
- \textbf{Table:} Release time, Volume, Location and size parameters of all
-identified slabs.
-
-\end{frame}
 
 
 
@@ -334,49 +314,49 @@ identified slabs.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \mysection{minor}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}\label{\secvariable} %%Eine Folie
-\begin{center}
-%http://lorempixel.com/1200/800/cats/Figure7/
-\includegraphics[width=1\textwidth,height=0.7\textheight,keepaspectratio]{%
-figure/figure7.png}
-\end{center}
-\vspace{-0.2cm}
-
-Duis condimentum est id nulla dapibus semper. Maecenas in tellus eget purus egestas fringilla in vitae nisl. Nulla vulputate tempor purus ut finibus. Nunc gravida placerat tortor vel efficitur. Sed tincidunt enim sed nisl hendrerit vestibulum. 
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}\label{\secvariable}
+  \begin{columns}[t]
+  %https://tex.stackexchange.com/a/7452/5483
+    \begin{column}[c]{0.45\textwidth}
+    \parbox{\linewidth}{
 
-%
-\includegraphics[width=0.45\textwidth,height=1\textheight,keepaspectratio]{%
-figure/figure7.png}\hspace{.05\textwidth}
-\includegraphics[width=0.45\textwidth,height=1\textheight,keepaspectratio]{%
-figure/figure7.png}
-
-Maecenas nec accumsan nunc. Aenean pretium nulla augue, sit amet volutpat leo consectetur tincidunt. Donec scelerisque erat a semper lacinia. Pellentesque aliquet libero neque, ac consequat metus feugiat eget. Etiam aliquam maximus libero, quis hendrerit ex mattis vitae. Duis sed metus ultrices, hendrerit sapien vitae, fringilla nunc. 
-
+      \begingroup
+      \fontsize{10pt}
+      \textbf{Results in .csv format}
+      
+      \vspace{12pt}
+      
+	  At the end of the automated process, Corpus Word Frequency Analysis will create .csv files with the frequency information. It will also timestamp the creation of the .csv onto the filename itself so that .csv files are never overwritten. The researcher can then import the .csv into other programs such as \begin{itemize}
+    \item OpenRefine
+    \item RStudio
+    \item Excel
+\end{itemize} \endgroup
+      }
+    \end{column}
+    \begin{column}[c]{0.45\textwidth}
+    \begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth,height=0.9\textheight,keepaspectratio]{figure/results.png}
+\caption{Screenshot of R script used in the RStudio environment. Screenshot by Jan Jugueta.}
+\end{figure}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \mysection{conclusion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}\label{\secvariable}
-  
+  \textbf{Main Points}
   \begin{itemize}
-   \item Curabitur viverra massa vel elit tincidunt lacinia. Pellentesque id est lobortis, interdum felis nec, faucibus augue. Suspendisse varius sit amet dui ac dignissim. Quisque mattis, odio a congue lobortis, eros turpis placerat enim, ac tempor lorem nisl ut velit. Mauris vel nulla a quam viverra faucibus. 
-  \item Quisque sed orci eu libero mattis lobortis. Curabitur aliquam lorem neque, ac auctor justo sagittis sed. Nunc augue nisl, mattis sed turpis at, elementum lobortis augue. Vestibulum porta felis bibendum mattis iaculis. Nulla dignissim varius rutrum.
-  \item Vivamus eget semper nunc. Donec sodales ornare porttitor. Curabitur commodo viverra arcu. Aliquam consequat felis non dolor consequat ultricies. Mauris non finibus nisl. Sed tincidunt felis at porttitor posuere.
+  \item Corpus Word Frequency Analysis is a simple, yet \emph{quick} way to find out the most frequently used words in a corpus. 
+  \item It can run on all major operating systems, Windows, Mac OSX and Unix.
+  \item Corpus Word Frequency Analysis utilises the programming languages of R and Bash and its code is available as Open Source.
+  \item You can download Corpus Word Frequency Analysis from https://github.com/MQ-FOAR705/jugueta-corpus-analysis
 
   \end{itemize}
 
-  \usebeamerfont{bodytext}
-  K\"ohler, A., J. N. McElwaine, B. Sovilla, M. Ash, P. Brennan (in Review),
-Surge dynamics of the 3 February 2015 avalanches in Valle\'e de la Sionne,
-\textit{J. Geophys. Res.} 
   
 \end{frame}
 
